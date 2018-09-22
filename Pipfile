@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django-cors-middleware = "==1.2.0"
+django-extensions = "==1.7.1"
+djangorestframework = "==3.4.4"
+six = "==1.10.0"
+Django = "==1.10"
+PyJWT = "==1.4.2"
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"

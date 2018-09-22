@@ -7,4 +7,11 @@
 # from .models import User
 
 """Configure JWT Here"""
+from rest_framework.authentication import BaseAuthentication, get_authorization_header
 
+
+class JWTAuthentication(BaseAuthentication):
+    # def authenticate(self, request):
+    #     get_authorization_header
+    #
+    pass
