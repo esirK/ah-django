@@ -13,6 +13,8 @@ PyJWT = "==1.4.2"
 werkzeug = "*"
 ipdb = "*"
 pytz = "==2018.5"
+gunicorn = "*"
+whitenoise = "*"
 
 [dev-packages]
 
