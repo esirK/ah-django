@@ -2,6 +2,8 @@ import json
 
 from rest_framework.renderers import JSONRenderer
 
+from authors.apps.authentication.backends import token_encode
+
 
 class UserJSONRenderer(JSONRenderer):
     charset = 'utf-8'
@@ -18,8 +20,9 @@ class UserJSONRenderer(JSONRenderer):
             # rendering errors.
             return super(UserJSONRenderer, self).render(data)
 
-
         # Finally, we can render our data under the "user" namespace.
+        data['token'] = token_encode(data).get('token')
+
         return json.dumps({
-            'user': data
+            'user': data,
         })
