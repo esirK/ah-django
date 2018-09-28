@@ -37,3 +37,7 @@ def token_encode(data):
     return {
         'token': jwt.encode({"email": data.get('email')}, settings.SECRET_KEY).decode(),
     }
+
+
+def token_decode(token):
+    return jwt.decode(token, settings.SECRET_KEY)
