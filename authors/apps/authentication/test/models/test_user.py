@@ -30,5 +30,3 @@ class TestUser(TestCase):
     def test_create_superuser_raises_type_error_if_password_is_not_supplied(self):
         with self.assertRaises(TypeError):
             User.objects.create_superuser(username="Admin", email="admin@admin.com")
-
-
